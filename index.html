@@ -53,10 +53,7 @@
       "email": "info@cyrilernest.co.uk",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Ridgeview Cottage, Coach Road",
-        "addressLocality": "Egerton",
         "addressRegion": "Kent",
-        "postalCode": "TN27 9BB",
         "addressCountry": "GB"
       },
       "openingHours": "Mo,Tu,We,Th,Fr 07:30-17:00, Sa 08:00-12:00",
@@ -96,7 +93,6 @@
                     class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-[2000ms] ease-in-out">
             </div>
 
-            <div class="absolute inset-0 bg-black/35 z-10"></div>
 
             <div
                 class="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-black/80 to-transparent z-10 pointer-events-none">
@@ -108,7 +104,7 @@
 
                 <!-- Google rating badge -->
                 <div class="inline-flex flex-col items-center gap-2 mb-3 px-6 py-4 rounded-2xl group cursor-pointer">
-                    <div class="flex items-center gap-1.5 transition-transform duration-300 group-hover:scale-105">
+                    <div class="flex items-center gap-1.5 transition-transform duration-300 group-hover:scale-105 hero-text-shadow">
                         <svg class="w-5 h-5 text-[#f2c83f] transition-colors duration-300 group-hover:text-[#df5164]" fill="currentColor" viewBox="0 0 24 24">
                             <path
                                 d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
@@ -130,17 +126,17 @@
                                 d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                         </svg>
                     </div>
-                    <span class="font-body text-white/90 text-sm font-semibold tracking-wide">5-Star Rated on
+                    <span class="font-body text-white text-sm font-semibold tracking-wide hero-text-shadow">5-Star Rated on
                         Google</span>
                 </div>
 
                 <h1
-                    class="font-heading text-[2.7rem] sm:text-5xl md:text-6xl lg:text-[4.5rem] font-bold mb-5 leading-tight text-white drop-shadow-2xl tracking-wide uppercase">
+                    class="font-heading text-[2.7rem] sm:text-5xl md:text-6xl lg:text-[4.5rem] font-bold mb-5 leading-tight text-white tracking-wide uppercase hero-text-shadow">
                     Cyril Ernest Landscapes
                 </h1>
 
                 <p
-                    class="font-body text-lg md:text-xl text-white/95 font-medium leading-relaxed max-w-3xl drop-shadow-md mb-8">
+                    class="font-body text-lg md:text-xl text-white/95 font-[525] leading-relaxed max-w-3xl mb-8 hero-text-shadow">
                     Taking pride in delivering high-quality gardening and landscaping services across Kent, tailored to your specific
                     needs. Trustworthy and professional since 1996.
                 </p>
@@ -182,6 +178,9 @@
         </section>
 
         <style>
+            .hero-text-shadow {
+                filter: drop-shadow(0 4px 64px rgba(0,0,0,0.83)) drop-shadow(0 8px 119px rgba(0,0,0,0.78)) drop-shadow(0 2px 15px rgba(0,0,0,0.83));
+            }
             .hero-slideshow img.active {
                 opacity: 1;
             }
@@ -248,14 +247,14 @@
 
                     <div class="flex items-center gap-12 md:gap-20 px-6 md:px-10">
                         <div class="flex items-center gap-3 hover-item">
-                            <svg class="w-6 h-6 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-6 h-6 text-[#f2c83f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
                             Over 30 Years Experience
                         </div>
                         <div class="flex items-center gap-3 hover-item">
-                            <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-6 h-6 text-[#f2c83f]" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
                                 </path>
@@ -263,7 +262,7 @@
                             Family-Run Company
                         </div>
                         <div class="flex items-center gap-3 hover-item">
-                            <svg class="w-6 h-6 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-6 h-6 text-[#f2c83f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                     d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
                                 </path>
@@ -273,14 +272,14 @@
                             Exceptional Workmanship
                         </div>
                         <div class="flex items-center gap-3 hover-item">
-                            <svg class="w-6 h-6 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-6 h-6 text-[#f2c83f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                     d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
                             Trustworthy & Loyal
                         </div>
                         <div class="flex items-center gap-3 hover-item">
-                            <svg class="w-6 h-6 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-6 h-6 text-[#f2c83f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                     d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
                                 </path>
@@ -290,14 +289,14 @@
                     </div>
                     <div class="flex items-center gap-12 md:gap-20 px-6 md:px-10">
                         <div class="flex items-center gap-3 hover-item">
-                            <svg class="w-6 h-6 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-6 h-6 text-[#f2c83f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
                             Over 30 Years Experience
                         </div>
                         <div class="flex items-center gap-3 hover-item">
-                            <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-6 h-6 text-[#f2c83f]" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
                                 </path>
@@ -305,7 +304,7 @@
                             Family-Run Company
                         </div>
                         <div class="flex items-center gap-3 hover-item">
-                            <svg class="w-6 h-6 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-6 h-6 text-[#f2c83f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                     d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
                                 </path>
@@ -315,14 +314,14 @@
                             Exceptional Workmanship
                         </div>
                         <div class="flex items-center gap-3 hover-item">
-                            <svg class="w-6 h-6 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-6 h-6 text-[#f2c83f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                     d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
                             Trustworthy & Loyal
                         </div>
                         <div class="flex items-center gap-3 hover-item">
-                            <svg class="w-6 h-6 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-6 h-6 text-[#f2c83f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                     d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
                                 </path>
@@ -362,8 +361,8 @@
                         <span class="pill-label">Our Story</span>
 
                         <h2
-                            class="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-semibold text-brand-dark mb-8 leading-tight flex flex-col items-center lg:items-start group/h2">
-                            Over 30 Years of Horticultural Excellence
+                            class="home-about-heading font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3rem] font-semibold text-brand-dark mb-8 leading-tight flex flex-col items-center lg:items-start group/h2">
+                            A family legacy in landscaping and ground maintenance. The Cyril Ernest Standard.
                             <span class="section-bar w-20 mt-4 lg:mt-6 group-hover/h2:w-36"></span>
                         </h2>
 
@@ -428,7 +427,7 @@
                         </a>
                     </div>
 
-                    <div class="w-full lg:w-[50%] order-1 lg:order-2 reveal reveal-up">
+                    <div class="w-full lg:w-[50%] order-3 lg:order-2 reveal reveal-up">
                         <div
                             class="rounded-[2.5rem] shadow-xl border-2 border-brand-dark/10 w-full overflow-hidden h-[400px] sm:h-[500px] md:h-[600px] lg:h-[800px]">
                             <img src="assets/Tony Best Pictures/AA - Tony + Team/Tony_Image.jpg" alt="Tony"
