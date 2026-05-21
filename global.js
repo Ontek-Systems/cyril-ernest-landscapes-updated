@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 container.classList.remove('py-2', 'md:py-3');
 
                 // Pages with light background at top: use dark logo (e.g. gallery, thank-you page)
-                const isLightTopPage = document.body.dataset.page === 'gallery' || document.body.dataset.page === 'thank-you';
+                const isLightTopPage = document.body.dataset.page === 'gallery' || document.body.dataset.page === 'thank-you' || document.body.dataset.page === 'services';
                 if (isLightTopPage) {
                     headerLogo.src = 'assets/Tony%20Best%20Pictures/logo_dark_txt.png';
                     header.classList.add('gallery-dark-nav');
