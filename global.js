@@ -124,7 +124,38 @@ document.addEventListener('DOMContentLoaded', async () => {
     revealElements.forEach(el => revealObserver.observe(el));
 
     // ==========================================
-    // 3. GLOBAL SLIDESHOW COMPONENT
+    // 3. STAT COUNTERS (.auto-counter)
+    // ==========================================
+    const counterEls = document.querySelectorAll('.auto-counter');
+    if (counterEls.length) {
+        const duration = 2000;
+        const frameRate = 1000 / 60;
+        const totalFrames = Math.round(duration / frameRate);
+        const easeOutQuad = t => t * (2 - t);
+        const animateCounter = (counter) => {
+            let frame = 0;
+            const target = parseInt(counter.getAttribute('data-target'), 10);
+            const counterInterval = setInterval(() => {
+                frame++;
+                const progress = easeOutQuad(frame / totalFrames);
+                const currentCount = Math.round(target * progress);
+                if (parseInt(counter.innerText, 10) !== currentCount) { counter.innerText = currentCount; }
+                if (frame === totalFrames) { clearInterval(counterInterval); counter.innerText = target; }
+            }, frameRate);
+        };
+        const statsObserver = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.querySelectorAll('.auto-counter').forEach(animateCounter);
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+        counterEls[0].closest('section') && statsObserver.observe(counterEls[0].closest('section'));
+    }
+
+    // ==========================================
+    // 4. GLOBAL SLIDESHOW COMPONENT
     // ==========================================
     document.querySelectorAll('.svc-slideshow').forEach(ss => {
         const slides = ss.querySelectorAll('.svc-slide');

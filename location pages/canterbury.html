@@ -27,6 +27,8 @@
     .svc-img-wrap { position:relative; width:100%; height:224px; overflow:hidden; background:#e5e7eb; flex-shrink:0; }
     .svc-img-wrap img { width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.7s cubic-bezier(0.4,0,0.2,1); }
     .group:hover .svc-img-wrap img { transform:scale(1.1); }
+    h2:hover .section-bar, h1:hover .section-bar { width: 10rem; }
+      .mob-py { padding-top: 3rem; padding-bottom: 3rem; }
   </style>
 </head>
 <body class="flex flex-col min-h-screen bg-brand-beige text-brand-text antialiased">
@@ -37,7 +39,7 @@
     <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 flex items-center justify-center overflow-hidden bg-brand-dark">
       <div class="w-full max-w-[98rem] mx-auto px-4 sm:px-6 lg:px-10 relative z-20 text-center text-white reveal reveal-up flex flex-col items-center">
         <span class="pill-label">Cyril Ernest Landscapes</span>
-        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-normal leading-tight relative pb-6 group/h2 flex flex-col items-center">
+        <h1 class="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-normal leading-tight relative pb-6 group/h2 flex flex-col items-center uppercase mt-6">
             Canterbury
             <span class="section-bar absolute bottom-0 left-1/2 -translate-x-1/2 w-16 md:w-20 group-hover/h2:w-32 md:group-hover/h2:w-40"></span>
         </h1>
@@ -46,7 +48,7 @@
     </section>
 
     <!-- ══ SERVICES GRID ══ -->
-    <section class="relative py-20 bg-white border-t border-brand-dark/5">
+    <section class="relative mob-py md:py-24 bg-white border-t border-brand-dark/5">
       <div class="w-full max-w-[96rem] mx-auto px-4 sm:px-8 lg:px-12">
         <div class="flex flex-col items-center text-center mb-12 reveal reveal-up">
           <span class="pill-label">What We Offer in Canterbury</span>
@@ -115,15 +117,15 @@
     </section>
 
     <!-- ══ WHY CHOOSE ══ -->
-    <section class="relative py-20 bg-brand-beige border-t border-brand-dark/5">
+    <section class="relative mob-py md:py-24 bg-brand-beige border-t border-brand-dark/5">
       <div class="w-full max-w-[96rem] mx-auto px-4 sm:px-8 lg:px-12">
         <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
           <div class="w-full lg:w-1/2 flex flex-col items-center text-center lg:items-start lg:text-left reveal reveal-up">
             <span class="pill-label">Why Choose Cyril Ernest</span>
-            <h2 class="font-heading text-4xl sm:text-5xl font-semibold text-brand-dark mb-8 leading-tight flex flex-col items-center lg:items-start group/h2">
+            <h2 class="font-heading text-4xl sm:text-5xl font-semibold text-brand-dark mb-8 leading-tight relative pb-6 group/h2 flex flex-col items-center lg:items-start">
               A Trusted Name Across Canterbury, Kent.
-              <span class="section-bar w-20 mt-4 lg:mt-5 group-hover/h2:w-40"></span>
+              <span class="section-bar absolute bottom-0 left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 w-16"></span>
             </h2>
             <div class="font-body text-base sm:text-lg text-brand-dark/80 leading-relaxed space-y-5 mb-10 max-w-xl">
               <p>Cyril Ernest Landscapes has been transforming gardens and outdoor spaces across Canterbury and the surrounding areas of Kent for over 30 years. Every project is delivered with the same personal, owner-led approach that has made us a trusted name in the county.</p>
@@ -131,15 +133,15 @@
             </div>
             <div class="grid grid-cols-3 gap-4 sm:gap-8 border-t border-brand-dark/10 pt-8 mb-10 w-full max-w-xl mx-auto lg:mx-0">
               <div class="group flex flex-col items-center lg:items-start">
-                <p class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-brand-dark transition-all duration-500 group-hover:-translate-y-2 group-hover:text-[#df5164]">30+</p>
+                <p class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-brand-dark transition-all duration-500 group-hover:-translate-y-2 group-hover:text-[#df5164]"><span class="auto-counter" data-target="30">0</span>+</p>
                 <p class="font-body text-[10px] sm:text-xs uppercase tracking-widest mt-2 opacity-70 font-bold text-brand-dark">Years Experience</p>
               </div>
               <div class="group flex flex-col items-center lg:items-start">
-                <p class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-brand-dark transition-all duration-500 group-hover:-translate-y-2 group-hover:text-[#df5164]">5&#9733;</p>
+                <p class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-brand-dark transition-all duration-500 group-hover:-translate-y-2 group-hover:text-[#df5164]"><span class="auto-counter" data-target="5">0</span>&#9733;</p>
                 <p class="font-body text-[10px] sm:text-xs uppercase tracking-widest mt-2 opacity-70 font-bold text-brand-dark">Rated Service</p>
               </div>
               <div class="group flex flex-col items-center lg:items-start">
-                <p class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-brand-dark transition-all duration-500 group-hover:-translate-y-2 group-hover:text-[#df5164]">100%</p>
+                <p class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-brand-dark transition-all duration-500 group-hover:-translate-y-2 group-hover:text-[#df5164]"><span class="auto-counter" data-target="100">0</span>%</p>
                 <p class="font-body text-[10px] sm:text-xs uppercase tracking-widest mt-2 opacity-70 font-bold text-brand-dark">Owner-Led</p>
               </div>
             </div>
@@ -155,8 +157,8 @@
           </div>
 
           <div class="w-full lg:w-1/2 reveal reveal-up" style="transition-delay:150ms;">
-            <div class="rounded-[2.5rem] shadow-xl w-full overflow-hidden bg-brand-dark" style="height:520px;">
-              <img src="assets/Tony%20Best%20Pictures/location_imgs/canterbury/canterbury.jpg" alt="Landscaping in Canterbury, Kent" loading="lazy" class="w-full h-full object-cover" onerror="this.style.display='none'">
+            <div class="group rounded-[2.5rem] shadow-xl w-full overflow-hidden bg-brand-dark" style="height:520px;">
+              <img src="assets/Tony%20Best%20Pictures/location_imgs/canterbury/canterbury.jpg" alt="Landscaping in Canterbury, Kent" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.style.display='none'">
             </div>
           </div>
 
@@ -165,7 +167,7 @@
     </section>
 
     <!-- ══ HOW WE WORK ══ -->
-    <section class="relative py-20 bg-white border-t border-brand-dark/5">
+    <section class="relative mob-py md:py-24 bg-white border-t border-brand-dark/5">
       <div class="w-full max-w-[96rem] mx-auto px-4 sm:px-8 lg:px-12">
         <div class="flex flex-col items-center text-center mb-12 md:mb-16 reveal reveal-up">
           <span class="pill-label">Simple &amp; Reliable</span>
@@ -223,8 +225,8 @@
       </div>
     </section>
 
-    <!-- ══ NEARBY LOCATIONS ══ -->
-    <section class="relative py-20 bg-brand-dark text-white border-t border-white/5">
+<!-- ══ NEARBY LOCATIONS ══ -->
+    <section class="relative mob-py md:py-24 bg-brand-dark text-white border-t border-white/5">
       <div class="w-full max-w-[96rem] mx-auto px-4 sm:px-8 lg:px-12 text-center">
         <div class="reveal reveal-up mb-10">
           <span class="pill-label">Wider Coverage</span>
@@ -250,6 +252,61 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- ══ CTA ══ -->
+  <section class="py-24 md:py-32 bg-brand-dark text-white overflow-hidden relative border-t border-white/5">
+
+        <div class="container mx-auto px-6 max-w-[90rem] relative z-20">
+
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
+
+                <div class="w-full lg:w-3/12 reveal reveal-up order-2 lg:order-1 flex justify-center lg:justify-start">
+                    <div class="relative w-full max-w-sm lg:max-w-none h-[300px] lg:h-[400px] rounded-[2.5rem] overflow-hidden shadow-2xl border-2 border-white/10 group">
+                        <img src="assets/Tony%20Best%20Pictures/Bespoke%20Planting%20Plans/planting_2.webp" alt="A freshly paved patio and landscaped garden" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-5/12 text-center reveal reveal-up order-1 lg:order-2 flex flex-col items-center">
+
+                    <h2 class="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight relative pb-6 group/h2 flex flex-col items-center mb-6">
+                        Explore Our Full Capabilities
+                    </h2>
+
+                    <p class="font-body text-lg lg:text-xl text-white/80 mb-10 max-w-md mx-auto leading-relaxed">
+                        Still looking for inspiration? Browse our past projects to see the level of craftsmanship and attention to detail we bring to every job.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <a href="gallery.html" class="btn-pill group relative inline-flex items-center justify-between gap-4 pl-6 pr-2 py-2 bg-transparent border border-white/30 font-body font-bold text-lg rounded-full overflow-hidden transition-all duration-500 hover:scale-105 hover:border-[#df5164]">
+                            <span class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#df5164] rounded-full transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[25] z-0"></span>
+                            <span class="relative z-10 text-white transition-colors duration-500 group-hover:text-white">View Gallery</span>
+                            <span class="relative z-10 w-10 h-10 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white -rotate-45 transition-transform duration-500 ease-in-out group-hover:rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                                </svg>
+                            </span>
+                        </a>
+                        <a href="services.html" class="btn-pill group relative inline-flex items-center justify-between gap-4 pl-6 pr-2 py-2 bg-[#df5164] shadow-[0_0_20px_rgba(231,64,64,0.3)] font-body font-bold text-lg rounded-full overflow-hidden transition-all duration-500 hover:scale-105 border-none">
+                            <span class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[25] z-0"></span>
+                            <span class="relative z-10 text-white transition-colors duration-500 group-hover:text-brand-dark">Our Services</span>
+                            <span class="relative z-10 w-10 h-10 bg-white rounded-full flex items-center justify-center transition-colors duration-700 group-hover:bg-brand-dark">
+                                <svg class="w-5 h-5 text-[#df5164] -rotate-45 transition-transform duration-500 ease-in-out group-hover:rotate-0 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-3/12 reveal reveal-up order-3 flex justify-center lg:justify-end mt-0 lg:mt-16" style="transition-delay: 200ms;">
+                    <div class="relative w-full max-w-sm lg:max-w-none h-[300px] lg:h-[400px] rounded-[2.5rem] overflow-hidden shadow-2xl border-2 border-white/10 group">
+                        <img src="assets/Tony%20Best%20Pictures/Paving%20%26%20Driveways/paving_%26_driveways_after_1.webp" alt="Freshly paved driveway and landscaping" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </section>
 
   </main>

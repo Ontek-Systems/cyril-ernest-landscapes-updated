@@ -429,9 +429,9 @@
 
                     <div class="w-full lg:w-[50%] order-3 lg:order-2 reveal reveal-up">
                         <div
-                            class="rounded-[2.5rem] shadow-xl border-2 border-brand-dark/10 w-full overflow-hidden h-[400px] sm:h-[500px] md:h-[600px] lg:h-[800px]">
+                            class="group rounded-[2.5rem] shadow-xl border-2 border-brand-dark/10 w-full overflow-hidden h-[400px] sm:h-[500px] md:h-[600px] lg:h-[800px]">
                             <img src="assets/Tony Best Pictures/AA - Tony + Team/Tony_Image.jpg" alt="Tony"
-                                class="w-full h-full object-cover" loading="lazy" decoding="async">
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async">
                         </div>
                     </div>
 
@@ -439,39 +439,6 @@
             </div>
         </section>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const duration = 2000;
-                const frameRate = 1000 / 60;
-                const totalFrames = Math.round(duration / frameRate);
-                const easeOutQuad = t => t * (2 - t);
-
-                const animateCounter = (counter) => {
-                    let frame = 0;
-                    const target = parseInt(counter.getAttribute('data-target'), 10);
-                    const counterInterval = setInterval(() => {
-                        frame++;
-                        const progress = easeOutQuad(frame / totalFrames);
-                        const currentCount = Math.round(target * progress);
-                        if (parseInt(counter.innerText, 10) !== currentCount) { counter.innerText = currentCount; }
-                        if (frame === totalFrames) { clearInterval(counterInterval); counter.innerText = target; }
-                    }, frameRate);
-                };
-
-                const observer = new IntersectionObserver((entries, obs) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            const countersToAnimate = entry.target.querySelectorAll('.auto-counter');
-                            countersToAnimate.forEach(animateCounter);
-                            obs.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.3 });
-
-                const statsSection = document.querySelector('.auto-counter')?.closest('section');
-                if (statsSection) { observer.observe(statsSection); }
-            });
-        </script>
 
         <section class="relative min-h-[100svh] py-20 flex items-center justify-center bg-white overflow-hidden">
             <div class="w-full max-w-[96rem] mx-auto px-4 sm:px-8 lg:px-12 relative z-20">
