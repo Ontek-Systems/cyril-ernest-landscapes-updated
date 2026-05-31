@@ -1,3 +1,13 @@
+<style>
+.nav-dropdown-wrap { position: relative; }
+.nav-dropdown-panel { position: absolute; left: 50%; top: 100%; transform: translateX(-50%); padding-top: 0.5rem; opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease; pointer-events: none; z-index: 50; }
+.nav-dropdown-wrap:hover .nav-dropdown-panel { opacity: 1; visibility: visible; pointer-events: auto; }
+.nav-dropdown-wrap:hover .nav-dropdown-chevron { transform: rotate(180deg); }
+.nav-dropdown-chevron { transition: transform 0.3s ease; }
+.nav-dropdown-box { width: 500px; }
+.nav-dropdown-grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: 2.5rem; row-gap: 0.625rem; }
+.nav-dropdown-grid a { white-space: nowrap; }
+</style>
 <header id="site-header"
         class="fixed w-full top-0 left-0 z-50 transition-all duration-300 bg-transparent text-white border-b border-transparent">
         <div id="header-container"
@@ -18,6 +28,44 @@
                     class="hover:text-brand-accent transition-all duration-300 hover:scale-105 whitespace-nowrap">Gallery</a>
                 <a href="index.html#faq"
                     class="hover:text-brand-accent transition-all duration-300 hover:scale-105 whitespace-nowrap">FAQs</a>
+
+                <!-- Where We Serve Dropdown -->
+                <div class="nav-dropdown-wrap">
+                    <a href="locations.html"
+                        class="inline-flex items-center gap-1 whitespace-nowrap hover:text-brand-accent transition-all duration-300 hover:scale-105 py-4">
+                        Where We Serve
+                        <svg class="nav-dropdown-chevron w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </a>
+                    <div class="nav-dropdown-panel">
+                        <div class="nav-dropdown-box bg-brand-dark border border-white/10 shadow-2xl rounded-3xl p-6 text-white">
+                            <a href="locations.html" class="block text-center text-brand-accent font-heading font-extrabold text-[13px] tracking-widest uppercase border-b border-white/20 pb-4 mb-4 hover:opacity-75 transition-opacity">All Locations</a>
+                            <ul class="nav-dropdown-grid text-[14px] font-medium">
+                                <li><a href="location%20pages/maidstone.html" class="hover:text-brand-accent transition-colors block leading-tight whitespace-nowrap">Maidstone</a></li>
+                                <li><a href="location%20pages/canterbury.html" class="hover:text-brand-accent transition-colors block leading-tight whitespace-nowrap">Canterbury</a></li>
+                                <li><a href="location%20pages/royal-tunbridge-wells.html" class="hover:text-brand-accent transition-colors block leading-tight whitespace-nowrap">Royal Tunbridge Wells</a></li>
+                                <li><a href="location%20pages/ashford.html" class="hover:text-brand-accent transition-colors block leading-tight whitespace-nowrap">Ashford</a></li>
+                                <li><a href="location%20pages/dartford.html" class="hover:text-brand-accent transition-colors block leading-tight whitespace-nowrap">Dartford</a></li>
+                                <li><a href="location%20pages/gravesend.html" class="hover:text-brand-accent transition-colors block leading-tight whitespace-nowrap">Gravesend</a></li>
+                                <li><a href="location%20pages/margate.html" class="hover:text-brand-accent transition-colors block leading-tight whitespace-nowrap">Margate</a></li>
+                                <li><a href="location%20pages/folkestone.html" class="hover:text-brand-accent transition-colors block leading-tight whitespace-nowrap">Folkestone</a></li>
+                                <li><a href="location%20pages/tonbridge.html" class="hover:text-brand-accent transition-colors block leading-tight whitespace-nowrap">Tonbridge</a></li>
+                                <li><a href="location%20pages/sevenoaks.html" class="hover:text-brand-accent transition-colors block leading-tight whitespace-nowrap">Sevenoaks</a></li>
+                                <li><a href="location%20pages/sittingbourne.html" class="hover:text-brand-accent transition-colors block leading-tight whitespace-nowrap">Sittingbourne</a></li>
+                                <li><a href="location%20pages/chatham.html" class="hover:text-brand-accent transition-colors block leading-tight whitespace-nowrap">Chatham</a></li>
+                                <li><a href="location%20pages/gillingham.html" class="hover:text-brand-accent transition-colors block leading-tight whitespace-nowrap">Gillingham</a></li>
+                                <li><a href="location%20pages/rochester.html" class="hover:text-brand-accent transition-colors block leading-tight whitespace-nowrap">Rochester</a></li>
+                                <li><a href="location%20pages/dover.html" class="hover:text-brand-accent transition-colors block leading-tight whitespace-nowrap">Dover</a></li>
+                                <li><a href="location%20pages/ramsgate.html" class="hover:text-brand-accent transition-colors block leading-tight whitespace-nowrap">Ramsgate</a></li>
+                                <li><a href="location%20pages/whitstable.html" class="hover:text-brand-accent transition-colors block leading-tight whitespace-nowrap">Whitstable</a></li>
+                                <li><a href="location%20pages/faversham.html" class="hover:text-brand-accent transition-colors block leading-tight whitespace-nowrap">Faversham</a></li>
+                                <li><a href="location%20pages/tenterden.html" class="hover:text-brand-accent transition-colors block leading-tight whitespace-nowrap">Tenterden</a></li>
+                                <li><a href="location%20pages/west-malling.html" class="hover:text-brand-accent transition-colors block leading-tight whitespace-nowrap">West Malling</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="flex items-center gap-8">
                     <a href="contact.html"
@@ -57,6 +105,47 @@
                         class="block py-2 text-lg font-medium hover:text-brand-accent transition-colors">Gallery</a>
                     <a href="index.html#faq"
                         class="block py-2 text-lg font-medium hover:text-brand-accent transition-colors">FAQs</a>
+
+                    <!-- Where We Serve mobile expandable -->
+                    <div class="w-full">
+                        <button onclick="var p=document.getElementById('mobileLocationsPanel');var open=!p.classList.contains('mob-loc-closed');p.style.maxHeight=open?'0':'600px';p.style.opacity=open?'0':'1';p.classList.toggle('mob-loc-closed');this.querySelector('svg').style.transform=open?'rotate(0deg)':'rotate(180deg)';"
+                            class="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-brand-dark/5 text-lg font-medium hover:text-brand-accent transition-colors">
+                            <span>Where We Serve</span>
+                            <svg style="transition:transform 0.3s ease;" class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="mobileLocationsPanel" class="mob-loc-closed overflow-hidden" style="max-height:0;opacity:0;transition:max-height 0.4s ease,opacity 0.3s ease;">
+                            <div class="mt-3 rounded-2xl bg-brand-dark p-5 text-white">
+                                <a href="locations.html" class="flex items-center justify-center gap-2 text-brand-accent font-heading font-extrabold text-[11px] tracking-widest uppercase border-b border-white/15 pb-4 mb-4 hover:opacity-75 transition-opacity">
+                                    View All Locations
+                                    <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"/></svg>
+                                </a>
+                                <div style="display:grid;grid-template-columns:1fr 1fr;column-gap:1.25rem;row-gap:0.75rem;font-size:0.875rem;font-weight:500;">
+                                    <a href="location%20pages/maidstone.html" class="hover:text-brand-accent transition-colors">Maidstone</a>
+                                    <a href="location%20pages/canterbury.html" class="hover:text-brand-accent transition-colors">Canterbury</a>
+                                    <a href="location%20pages/royal-tunbridge-wells.html" class="hover:text-brand-accent transition-colors" style="font-size:0.75rem;">Royal Tunbridge Wells</a>
+                                    <a href="location%20pages/ashford.html" class="hover:text-brand-accent transition-colors">Ashford</a>
+                                    <a href="location%20pages/dartford.html" class="hover:text-brand-accent transition-colors">Dartford</a>
+                                    <a href="location%20pages/gravesend.html" class="hover:text-brand-accent transition-colors">Gravesend</a>
+                                    <a href="location%20pages/margate.html" class="hover:text-brand-accent transition-colors">Margate</a>
+                                    <a href="location%20pages/folkestone.html" class="hover:text-brand-accent transition-colors">Folkestone</a>
+                                    <a href="location%20pages/tonbridge.html" class="hover:text-brand-accent transition-colors">Tonbridge</a>
+                                    <a href="location%20pages/sevenoaks.html" class="hover:text-brand-accent transition-colors">Sevenoaks</a>
+                                    <a href="location%20pages/sittingbourne.html" class="hover:text-brand-accent transition-colors">Sittingbourne</a>
+                                    <a href="location%20pages/chatham.html" class="hover:text-brand-accent transition-colors">Chatham</a>
+                                    <a href="location%20pages/gillingham.html" class="hover:text-brand-accent transition-colors">Gillingham</a>
+                                    <a href="location%20pages/rochester.html" class="hover:text-brand-accent transition-colors">Rochester</a>
+                                    <a href="location%20pages/dover.html" class="hover:text-brand-accent transition-colors">Dover</a>
+                                    <a href="location%20pages/ramsgate.html" class="hover:text-brand-accent transition-colors">Ramsgate</a>
+                                    <a href="location%20pages/whitstable.html" class="hover:text-brand-accent transition-colors">Whitstable</a>
+                                    <a href="location%20pages/faversham.html" class="hover:text-brand-accent transition-colors">Faversham</a>
+                                    <a href="location%20pages/tenterden.html" class="hover:text-brand-accent transition-colors">Tenterden</a>
+                                    <a href="location%20pages/west-malling.html" class="hover:text-brand-accent transition-colors">West Malling</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="pt-6 mt-2 border-t border-brand-dark/10">
                         <a href="contact.html"
