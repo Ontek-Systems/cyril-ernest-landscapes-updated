@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <base href="../">
+  <title>Garden Maintenance in Kent | Cyril Ernest Landscapes</title>
+  <meta name="description" content="Reliable garden maintenance across Kent. Lawn mowing, hedge trimming, weeding and seasonal tidy-ups. Contact Cyril Ernest Landscapes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .word-mask { display:inline-block; overflow:hidden; vertical-align:bottom; padding-bottom:0.15em; margin-bottom:-0.15em; }
+    .word-mask-inner { display:inline-block; transform:translateY(110%); transition:transform 0.8s cubic-bezier(0.2,0.8,0.2,1); will-change:transform; }
+    .loc-reveal.active .word-mask-inner { transform:translateY(0); }
+    .fade-in { opacity:0; transform:translateY(20px); transition:opacity 0.7s ease 0.4s, transform 0.7s ease 0.4s; }
+    .fade-in.active { opacity:1; transform:translateY(0); }
+    .svc-img-wrap { position:relative; width:100%; height:224px; overflow:hidden; background:#e5e7eb; flex-shrink:0; }
+    .svc-img-wrap img { width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.7s cubic-bezier(0.4,0,0.2,1); }
+    .group:hover .svc-img-wrap img { transform:scale(1.1); }
+  </style>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <!-- ══ HERO ══ -->
+  <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 flex items-center justify-center overflow-hidden bg-brand-dark">
+    <div class="w-full max-w-[98rem] mx-auto px-4 sm:px-6 lg:px-10 relative z-20 text-center text-white reveal reveal-up flex flex-col items-center">
+      <span class="pill-label">Our Services</span>
+      <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-normal leading-tight relative pb-6 group/h2 flex flex-col items-center">
+        Garden Maintenance
+        <span class="section-bar absolute bottom-0 left-1/2 -translate-x-1/2 w-16 md:w-20 group-hover/h2:w-32 md:group-hover/h2:w-40"></span>
+      </h1>
+      <p class="font-body text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mt-6">Reliable, regular garden maintenance across Kent. From lawn mowing and hedge trimming to seasonal tidy-ups, your outdoor space immaculate all year.</p>
+    </div>
+  </section>
+
+  <!-- ══ INTRODUCTION ══ -->
+  <section class="relative py-20 bg-white border-t border-brand-dark/5">
+    <div class="w-full max-w-[96rem] mx-auto px-4 sm:px-8 lg:px-12">
+      <div class="flex flex-col items-center gap-12 lg:gap-20">
+        <div class="w-full flex flex-col items-center text-center lg:items-start lg:text-left reveal reveal-up">
+          <span class="pill-label">About This Service</span>
+          <h2 class="font-heading text-4xl sm:text-5xl font-semibold text-brand-dark mb-8 leading-tight flex flex-col items-center lg:items-start group/h2">
+            Garden Maintenance
+            <span class="section-bar w-20 mt-4 lg:mt-5 group-hover/h2:w-40"></span>
+          </h2>
+          <div class="font-body text-base sm:text-lg text-brand-dark/80 leading-relaxed space-y-5 mb-10 max-w-xl">
+            <p>A garden only looks its best when it is cared for consistently. Our garden maintenance service provides reliable, scheduled visits tailored to your garden's needs throughout the year — so you can enjoy a beautiful outdoor space without the time and effort.</p>
+            <p>We carry out all aspects of regular garden upkeep: lawn mowing and edging, hedge cutting and shaping, border weeding and planting maintenance, pruning, leaf clearing and general seasonal tidying. Everything is done properly, not rushed.</p>
+            <p>All maintenance visits are carried out by our own team. You get consistent, experienced hands in your garden every time, and we get to know your space well enough to notice and address issues before they become problems.</p>
+          </div>
+          <div class="grid grid-cols-3 gap-4 sm:gap-8 border-t border-brand-dark/10 pt-8 mb-10 w-full max-w-xl mx-auto lg:mx-0">
+            <div class="group flex flex-col items-center lg:items-start">
+              <p class="font-heading text-3xl sm:text-4xl font-bold text-brand-dark transition-all duration-500 group-hover:-translate-y-2 group-hover:text-[#df5164]">30+</p>
+              <p class="font-body text-[10px] sm:text-xs uppercase tracking-widest mt-2 opacity-70 font-bold text-brand-dark">Years Experience</p>
+            </div>
+            <div class="group flex flex-col items-center lg:items-start">
+              <p class="font-heading text-3xl sm:text-4xl font-bold text-brand-dark transition-all duration-500 group-hover:-translate-y-2 group-hover:text-[#df5164]">5&#9733;</p>
+              <p class="font-body text-[10px] sm:text-xs uppercase tracking-widest mt-2 opacity-70 font-bold text-brand-dark">Rated Service</p>
+            </div>
+            <div class="group flex flex-col items-center lg:items-start">
+              <p class="font-heading text-3xl sm:text-4xl font-bold text-brand-dark transition-all duration-500 group-hover:-translate-y-2 group-hover:text-[#df5164]">100%</p>
+              <p class="font-body text-[10px] sm:text-xs uppercase tracking-widest mt-2 opacity-70 font-bold text-brand-dark">Owner-Led</p>
+            </div>
+          </div>
+          <a href="contact.html" class="group relative inline-flex items-center justify-between gap-4 pl-6 pr-2 py-2 bg-[#df5164] text-white font-body font-bold text-lg rounded-full overflow-hidden transition-transform duration-500 hover:scale-105 border-none shadow-sm">
+              <span class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-brand-dark rounded-full transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[25] z-0"></span>
+              <span class="relative z-10 transition-colors duration-500">Get a Free Quote</span>
+              <span class="relative z-10 w-10 h-10 flex items-center justify-center">
+                <svg class="w-5 h-5 text-white -rotate-45 transition-transform duration-500 ease-in-out group-hover:rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path></svg>
+              </span>
+            </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section class="relative py-20 bg-white border-t border-brand-dark/5">
+      <div class="w-full max-w-[96rem] mx-auto px-4 sm:px-8 lg:px-12">
+        <div class="flex flex-col items-center text-center mb-12 reveal reveal-up">
+          <span class="pill-label">Our Work</span>
+          <h2 class="font-heading text-4xl sm:text-5xl font-semibold text-brand-dark leading-tight flex flex-col items-center relative pb-6 mb-4 group/h2">
+            Gallery
+            <span class="section-bar absolute bottom-0 left-1/2 -translate-x-1/2 w-16 group-hover/h2:w-36"></span>
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div class="overflow-hidden rounded-2xl aspect-video reveal reveal-up" style="transition-delay:0ms;">
+            <img src="assets/Tony%20Best%20Pictures/Garden%20Maintenance%20(mowing%20_%20hedge%20trimming)/garden_maintenance_1.webp" alt="Garden Maintenance project" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+          </div>
+          <div class="overflow-hidden rounded-2xl aspect-video reveal reveal-up" style="transition-delay:60ms;">
+            <img src="assets/Tony%20Best%20Pictures/Garden%20Maintenance%20(mowing%20_%20hedge%20trimming)/garden_maintenance_2.webp" alt="Garden Maintenance project" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+          </div>
+          <div class="overflow-hidden rounded-2xl aspect-video reveal reveal-up" style="transition-delay:120ms;">
+            <img src="assets/Tony%20Best%20Pictures/Garden%20Maintenance%20(mowing%20_%20hedge%20trimming)/garden_maintenance_3.webp" alt="Garden Maintenance project" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+          </div>
+          <div class="overflow-hidden rounded-2xl aspect-video reveal reveal-up" style="transition-delay:180ms;">
+            <img src="assets/Tony%20Best%20Pictures/Garden%20Maintenance%20(mowing%20_%20hedge%20trimming)/garden_maintenance_4.webp" alt="Garden Maintenance project" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+          </div>
+          <div class="overflow-hidden rounded-2xl aspect-video reveal reveal-up" style="transition-delay:240ms;">
+            <img src="assets/Tony%20Best%20Pictures/Garden%20Maintenance%20(mowing%20_%20hedge%20trimming)/garden_maintenance_5.webp" alt="Garden Maintenance project" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+          </div>
+          <div class="overflow-hidden rounded-2xl aspect-video reveal reveal-up" style="transition-delay:300ms;">
+            <img src="assets/Tony%20Best%20Pictures/Garden%20Maintenance%20(mowing%20_%20hedge%20trimming)/garden_maintenance_6.webp" alt="Garden Maintenance project" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+          </div>
+          <div class="overflow-hidden rounded-2xl aspect-video reveal reveal-up" style="transition-delay:360ms;">
+            <img src="assets/Tony%20Best%20Pictures/Garden%20Maintenance%20(mowing%20_%20hedge%20trimming)/garden_maintenance_8.webp" alt="Garden Maintenance project" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+          </div>
+          <div class="overflow-hidden rounded-2xl aspect-video reveal reveal-up" style="transition-delay:420ms;">
+            <img src="assets/Tony%20Best%20Pictures/Garden%20Maintenance%20(mowing%20_%20hedge%20trimming)/garden_maintenance_9.webp" alt="Garden Maintenance project" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+          </div>
+          <div class="overflow-hidden rounded-2xl aspect-video reveal reveal-up" style="transition-delay:480ms;">
+            <img src="assets/Tony%20Best%20Pictures/Garden%20Maintenance%20(mowing%20_%20hedge%20trimming)/garden_maintenance_10.webp" alt="Garden Maintenance project" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+          </div>
+          <div class="overflow-hidden rounded-2xl aspect-video reveal reveal-up" style="transition-delay:540ms;">
+            <img src="assets/Tony%20Best%20Pictures/Garden%20Maintenance%20(mowing%20_%20hedge%20trimming)/garden_maintenance_11.webp" alt="Garden Maintenance project" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+          </div>
+          <div class="overflow-hidden rounded-2xl aspect-video reveal reveal-up" style="transition-delay:600ms;">
+            <img src="assets/Tony%20Best%20Pictures/Garden%20Maintenance%20(mowing%20_%20hedge%20trimming)/garden_maintenance_12.webp" alt="Garden Maintenance project" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+          </div>
+          <div class="overflow-hidden rounded-2xl aspect-video reveal reveal-up" style="transition-delay:660ms;">
+            <img src="assets/Tony%20Best%20Pictures/Garden%20Maintenance%20(mowing%20_%20hedge%20trimming)/garden_maintenance_13.webp" alt="Garden Maintenance project" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- ══ CTA ══ -->
+  <section class="relative py-24 bg-brand-dark overflow-hidden">
+    <div class="w-full max-w-[96rem] mx-auto px-4 sm:px-8 lg:px-12 flex flex-col items-center text-center reveal reveal-up">
+      <span class="pill-label">Get Started</span>
+      <h2 class="font-heading text-4xl sm:text-5xl font-semibold text-white mb-6 leading-tight flex flex-col items-center group/h2">
+        Ready to Transform Your Garden?
+        <span class="section-bar w-20 mt-4 group-hover/h2:w-40"></span>
+      </h2>
+      <p class="font-body text-lg text-white/75 leading-relaxed max-w-xl mb-10">Enjoy a beautiful garden all year without lifting a finger. Get in touch to discuss a maintenance schedule.</p>
+      <a href="contact.html" class="group relative inline-flex items-center justify-between gap-4 pl-6 pr-2 py-2 bg-[#df5164] text-white font-body font-bold text-lg rounded-full overflow-hidden transition-transform duration-500 hover:scale-105 border-none shadow-[0_0_20px_rgba(223,81,100,0.3)]">
+        <span class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-[25] z-0"></span>
+        <span class="relative z-10 transition-colors duration-500 group-hover:text-brand-dark">Book Your Free Consultation</span>
+        <span class="relative z-10 w-10 h-10 bg-white rounded-full flex items-center justify-center transition-colors duration-700 group-hover:bg-brand-dark">
+          <svg class="w-5 h-5 text-[#df5164] -rotate-45 transition-transform duration-500 ease-in-out group-hover:rotate-0 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"></path></svg>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="global.js"></script>
+  
+</body>
+</html>
