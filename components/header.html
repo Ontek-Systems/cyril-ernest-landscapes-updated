@@ -1,12 +1,16 @@
 <style>
 .nav-dropdown-wrap { position: relative; }
-.nav-dropdown-panel { position: absolute; left: 50%; top: 100%; transform: translateX(-50%); padding-top: 0.5rem; opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease; pointer-events: none; z-index: 50; }
+.nav-dropdown-panel { position: absolute; left: 50%; top: 100%; transform: translateX(-50%); padding-top: 0.75rem; opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease; pointer-events: none; z-index: 50; }
 .nav-dropdown-wrap:hover .nav-dropdown-panel { opacity: 1; visibility: visible; pointer-events: auto; }
 .nav-dropdown-wrap:hover .nav-dropdown-chevron { transform: rotate(180deg); }
 .nav-dropdown-chevron { transition: transform 0.3s ease; }
-.nav-dropdown-box { width: 500px; }
-.nav-dropdown-grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: 2.5rem; row-gap: 0.625rem; }
-.nav-dropdown-grid a { white-space: nowrap; }
+.nav-dropdown-box { width: 540px; }
+.nav-dropdown-grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: 2rem; row-gap: 0; }
+.nav-dropdown-grid a { white-space: nowrap; display: block; padding: 0.5rem 0; transition: color 0.25s ease; }
+.nav-dropdown-grid a:hover { color: var(--color-brand-accent); }
+.nav-view-all { display: block; text-align: center; font-family: var(--font-heading, serif); font-weight: 800; font-size: 18px; letter-spacing: 0.08em; text-transform: uppercase; padding: 1.25rem 1.5rem 1rem; border-bottom: 1px solid rgba(26,26,26,0.08); transition: color 0.25s ease; }
+.nav-view-all:hover { color: var(--color-brand-accent); }
+#mobileNavInner::-webkit-scrollbar { display: none; }
 </style>
 <header id="site-header"
         class="fixed w-full top-0 left-0 z-50 transition-all duration-300 bg-transparent text-white border-b border-transparent">
@@ -18,10 +22,7 @@
                     class="w-28 md:w-32 lg:w-40 h-auto object-contain transition-transform duration-300 group-hover:scale-105">
             </a>
 
-            <nav class="hidden xl:flex items-center gap-8 font-body text-[17px] font-semibold tracking-wide">
-                <a href="about.html"
-                    class="hover:text-brand-accent transition-all duration-300 hover:scale-105 whitespace-nowrap">About
-                    Us</a>
+            <nav class="hidden xl:flex items-center gap-8 font-body text-[17px] font-bold tracking-wide">
                 <!-- Services Dropdown -->
                 <div class="nav-dropdown-wrap">
                     <a href="services.html"
@@ -32,30 +33,26 @@
                         </svg>
                     </a>
                     <div class="nav-dropdown-panel">
-                        <div class="nav-dropdown-box bg-brand-accent border border-white/10 shadow-2xl rounded-3xl p-6 text-white">
-                            <a href="services.html" class="block text-center text-white font-heading font-extrabold text-[13px] tracking-widest uppercase border-b border-white/20 pb-4 mb-4 hover:opacity-75 transition-opacity">All Services</a>
-                            <ul class="nav-dropdown-grid text-[14px] font-medium">
-                                <li><a href="service%20pages/garden-design.html" class="hover:text-brand-dark transition-colors block leading-tight">Garden Design</a></li>
-                                <li><a href="service%20pages/patios.html" class="hover:text-brand-dark transition-colors block leading-tight">Patios</a></li>
-                                <li><a href="service%20pages/paving-driveways.html" class="hover:text-brand-dark transition-colors block leading-tight">Paving &amp; Driveways</a></li>
-                                <li><a href="service%20pages/walling.html" class="hover:text-brand-dark transition-colors block leading-tight">Walling</a></li>
-                                <li><a href="service%20pages/fencing.html" class="hover:text-brand-dark transition-colors block leading-tight">Fencing</a></li>
-                                <li><a href="service%20pages/decking.html" class="hover:text-brand-dark transition-colors block leading-tight">Decking</a></li>
-                                <li><a href="service%20pages/garden-rooms.html" class="hover:text-brand-dark transition-colors block leading-tight">Garden Rooms</a></li>
-                                <li><a href="service%20pages/garden-sheds.html" class="hover:text-brand-dark transition-colors block leading-tight">Garden Sheds</a></li>
-                                <li><a href="service%20pages/lawn-installation.html" class="hover:text-brand-dark transition-colors block leading-tight">Lawn Installation</a></li>
-                                <li><a href="service%20pages/garden-maintenance.html" class="hover:text-brand-dark transition-colors block leading-tight">Garden Maintenance</a></li>
-                                <li><a href="service%20pages/commercial-maintenance.html" class="hover:text-brand-dark transition-colors block leading-tight">Commercial Maintenance</a></li>
-                                <li><a href="service%20pages/tree-work.html" class="hover:text-brand-dark transition-colors block leading-tight">Tree Work</a></li>
-                                <li><a href="service%20pages/planting-plans.html" class="hover:text-brand-dark transition-colors block leading-tight">Planting Plans</a></li>
+                        <div class="nav-dropdown-box bg-brand-beige border border-brand-dark/10 shadow-2xl rounded-2xl overflow-hidden text-brand-dark">
+                            <a href="services.html" class="nav-view-all">All Services</a>
+                            <ul class="nav-dropdown-grid text-[14px] font-medium px-6 pt-4 pb-6">
+                                <li><a href="service%20pages/garden-design.html">Garden Design</a></li>
+                                <li><a href="service%20pages/patios.html">Patios</a></li>
+                                <li><a href="service%20pages/paving-driveways.html">Paving &amp; Driveways</a></li>
+                                <li><a href="service%20pages/walling.html">Walling</a></li>
+                                <li><a href="service%20pages/fencing.html">Fencing</a></li>
+                                <li><a href="service%20pages/decking.html">Decking</a></li>
+                                <li><a href="service%20pages/garden-rooms.html">Garden Rooms</a></li>
+                                <li><a href="service%20pages/garden-sheds.html">Garden Sheds</a></li>
+                                <li><a href="service%20pages/lawn-installation.html">Lawn Installation</a></li>
+                                <li><a href="service%20pages/garden-maintenance.html">Garden Maintenance</a></li>
+                                <li><a href="service%20pages/commercial-maintenance.html">Commercial Maintenance</a></li>
+                                <li><a href="service%20pages/tree-work.html">Tree Work</a></li>
+                                <li><a href="service%20pages/planting-plans.html">Planting Plans</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <a href="gallery.html"
-                    class="hover:text-brand-accent transition-all duration-300 hover:scale-105 whitespace-nowrap">Gallery</a>
-                <a href="index.html#faq"
-                    class="hover:text-brand-accent transition-all duration-300 hover:scale-105 whitespace-nowrap">FAQs</a>
 
                 <!-- Where We Serve Dropdown -->
                 <div class="nav-dropdown-wrap">
@@ -67,39 +64,46 @@
                         </svg>
                     </a>
                     <div class="nav-dropdown-panel">
-                        <div class="nav-dropdown-box bg-brand-accent border border-white/10 shadow-2xl rounded-3xl p-6 text-white">
-                            <a href="locations.html" class="block text-center text-white font-heading font-extrabold text-[13px] tracking-widest uppercase border-b border-white/20 pb-4 mb-4 hover:opacity-75 transition-opacity">All Locations</a>
-                            <ul class="nav-dropdown-grid text-[14px] font-medium">
-                                <li><a href="location%20pages/maidstone.html" class="hover:text-brand-dark transition-colors block leading-tight whitespace-nowrap">Maidstone</a></li>
-                                <li><a href="location%20pages/canterbury.html" class="hover:text-brand-dark transition-colors block leading-tight whitespace-nowrap">Canterbury</a></li>
-                                <li><a href="location%20pages/royal-tunbridge-wells.html" class="hover:text-brand-dark transition-colors block leading-tight whitespace-nowrap">Royal Tunbridge Wells</a></li>
-                                <li><a href="location%20pages/ashford.html" class="hover:text-brand-dark transition-colors block leading-tight whitespace-nowrap">Ashford</a></li>
-                                <li><a href="location%20pages/dartford.html" class="hover:text-brand-dark transition-colors block leading-tight whitespace-nowrap">Dartford</a></li>
-                                <li><a href="location%20pages/gravesend.html" class="hover:text-brand-dark transition-colors block leading-tight whitespace-nowrap">Gravesend</a></li>
-                                <li><a href="location%20pages/margate.html" class="hover:text-brand-dark transition-colors block leading-tight whitespace-nowrap">Margate</a></li>
-                                <li><a href="location%20pages/folkestone.html" class="hover:text-brand-dark transition-colors block leading-tight whitespace-nowrap">Folkestone</a></li>
-                                <li><a href="location%20pages/tonbridge.html" class="hover:text-brand-dark transition-colors block leading-tight whitespace-nowrap">Tonbridge</a></li>
-                                <li><a href="location%20pages/sevenoaks.html" class="hover:text-brand-dark transition-colors block leading-tight whitespace-nowrap">Sevenoaks</a></li>
-                                <li><a href="location%20pages/sittingbourne.html" class="hover:text-brand-dark transition-colors block leading-tight whitespace-nowrap">Sittingbourne</a></li>
-                                <li><a href="location%20pages/chatham.html" class="hover:text-brand-dark transition-colors block leading-tight whitespace-nowrap">Chatham</a></li>
-                                <li><a href="location%20pages/gillingham.html" class="hover:text-brand-dark transition-colors block leading-tight whitespace-nowrap">Gillingham</a></li>
-                                <li><a href="location%20pages/rochester.html" class="hover:text-brand-dark transition-colors block leading-tight whitespace-nowrap">Rochester</a></li>
-                                <li><a href="location%20pages/dover.html" class="hover:text-brand-dark transition-colors block leading-tight whitespace-nowrap">Dover</a></li>
-                                <li><a href="location%20pages/ramsgate.html" class="hover:text-brand-dark transition-colors block leading-tight whitespace-nowrap">Ramsgate</a></li>
-                                <li><a href="location%20pages/whitstable.html" class="hover:text-brand-dark transition-colors block leading-tight whitespace-nowrap">Whitstable</a></li>
-                                <li><a href="location%20pages/faversham.html" class="hover:text-brand-dark transition-colors block leading-tight whitespace-nowrap">Faversham</a></li>
-                                <li><a href="location%20pages/tenterden.html" class="hover:text-brand-dark transition-colors block leading-tight whitespace-nowrap">Tenterden</a></li>
-                                <li><a href="location%20pages/west-malling.html" class="hover:text-brand-dark transition-colors block leading-tight whitespace-nowrap">West Malling</a></li>
+                        <div class="nav-dropdown-box bg-brand-beige border border-brand-dark/10 shadow-2xl rounded-2xl overflow-hidden text-brand-dark">
+                            <a href="locations.html" class="nav-view-all">All Locations</a>
+                            <ul class="nav-dropdown-grid text-[14px] font-medium px-6 pt-4 pb-6">
+                                <li><a href="location%20pages/maidstone.html">Maidstone</a></li>
+                                <li><a href="location%20pages/canterbury.html">Canterbury</a></li>
+                                <li><a href="location%20pages/royal-tunbridge-wells.html">Royal Tunbridge Wells</a></li>
+                                <li><a href="location%20pages/ashford.html">Ashford</a></li>
+                                <li><a href="location%20pages/dartford.html">Dartford</a></li>
+                                <li><a href="location%20pages/gravesend.html">Gravesend</a></li>
+                                <li><a href="location%20pages/margate.html">Margate</a></li>
+                                <li><a href="location%20pages/folkestone.html">Folkestone</a></li>
+                                <li><a href="location%20pages/tonbridge.html">Tonbridge</a></li>
+                                <li><a href="location%20pages/sevenoaks.html">Sevenoaks</a></li>
+                                <li><a href="location%20pages/sittingbourne.html">Sittingbourne</a></li>
+                                <li><a href="location%20pages/chatham.html">Chatham</a></li>
+                                <li><a href="location%20pages/gillingham.html">Gillingham</a></li>
+                                <li><a href="location%20pages/rochester.html">Rochester</a></li>
+                                <li><a href="location%20pages/dover.html">Dover</a></li>
+                                <li><a href="location%20pages/ramsgate.html">Ramsgate</a></li>
+                                <li><a href="location%20pages/whitstable.html">Whitstable</a></li>
+                                <li><a href="location%20pages/faversham.html">Faversham</a></li>
+                                <li><a href="location%20pages/tenterden.html">Tenterden</a></li>
+                                <li><a href="location%20pages/west-malling.html">West Malling</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
+                <a href="about.html"
+                    class="hover:text-brand-accent transition-all duration-300 hover:scale-105 whitespace-nowrap">About Us</a>
+                <a href="gallery.html"
+                    class="hover:text-brand-accent transition-all duration-300 hover:scale-105 whitespace-nowrap">Gallery</a>
+                <a href="index.html#faq"
+                    class="hover:text-brand-accent transition-all duration-300 hover:scale-105 whitespace-nowrap">FAQs</a>
+
                 <div class="flex items-center gap-8">
                     <a href="contact.html"
                         class="hover:text-brand-accent transition-all duration-300 hover:scale-105 whitespace-nowrap">Contact</a>
 
-                    <a href="https://maps.google.com/?q=Kent,+UK" target="_blank" rel="noopener noreferrer"
+                    <a href="https://share.google/knW7RpM65NNBU1unT" target="_blank" rel="noopener noreferrer"
                         class="flex items-center gap-2 hover:text-brand-accent transition-all duration-300 hover:scale-105 group whitespace-nowrap">
                         Kent, UK
                         <svg class="w-4 h-4 group-hover:-translate-y-1 transition-transform duration-300"
@@ -121,92 +125,88 @@
         </div>
 
         <div id="mobileNav"
-            class="xl:hidden absolute top-full left-0 w-full px-4 pt-2 pb-6 transition-all duration-400 ease-out opacity-0 invisible -translate-y-4 pointer-events-none">
-            <div
-                class="bg-brand-beige border border-brand-dark/10 shadow-2xl rounded-2xl overflow-hidden">
-                <div class="flex flex-col px-6 py-6 space-y-4 text-center font-body text-brand-dark">
-                    <a href="about.html"
-                        class="block py-2 text-lg font-medium hover:text-brand-accent transition-colors">About Us</a>
+            class="xl:hidden absolute top-full left-0 w-full px-4 pt-2 pb-6 transition-all duration-300 ease-out opacity-0 -translate-y-2 pointer-events-none">
+            <div class="bg-brand-beige border border-brand-dark/10 shadow-2xl rounded-2xl" style="overflow-y:auto;-webkit-overflow-scrolling:touch;touch-action:pan-y;max-height:70vh;overscroll-behavior:contain;scrollbar-width:none;-ms-overflow-style:none;" id="mobileNavInner">
+                <div class="flex flex-col py-6 text-center font-body text-brand-dark">
+
                     <!-- Services mobile expandable -->
                     <div class="w-full">
-                        <button onclick="var p=document.getElementById('mobileServicesPanel');var open=!p.classList.contains('mob-svc-closed');p.style.maxHeight=open?'0':'600px';p.style.opacity=open?'0':'1';p.classList.toggle('mob-svc-closed');this.querySelector('svg').style.transform=open?'rotate(0deg)':'rotate(180deg)';"
-                            class="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-brand-dark/5 text-lg font-medium hover:text-brand-accent transition-colors">
-                            <span>Services</span>
-                            <svg style="transition:transform 0.3s ease;" class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <button onclick="var p=document.getElementById('mobileServicesPanel');var open=!p.classList.contains('mob-svc-closed');p.style.maxHeight=open?'0':'1200px';p.style.opacity=open?'0':'1';p.classList.toggle('mob-svc-closed');this.querySelector('svg').style.transform=open?'rotate(0deg)':'rotate(180deg)';"
+                            class="w-full flex items-center py-4 px-6 text-lg font-semibold hover:text-brand-accent transition-colors duration-200">
+                            <span class="w-4 h-4 shrink-0"></span>
+                            <span class="flex-1 text-center">Services</span>
+                            <svg style="transition:transform 0.3s ease;" class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div id="mobileServicesPanel" class="mob-svc-closed overflow-hidden" style="max-height:0;opacity:0;transition:max-height 0.4s ease,opacity 0.3s ease;">
-                            <div class="mt-3 rounded-2xl bg-brand-accent p-5 text-white">
-                                <a href="services.html" class="flex items-center justify-center gap-2 text-white font-heading font-extrabold text-[11px] tracking-widest uppercase border-b border-white/15 pb-4 mb-4 hover:opacity-75 transition-opacity">
-                                    View All Services
-                                    <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"/></svg>
+                        <div id="mobileServicesPanel" class="mob-svc-closed overflow-hidden" style="max-height:0;opacity:0;transition:max-height 0.5s ease,opacity 0.3s ease;">
+                            <div class="pb-2">
+                                <a href="services.html" class="block text-center text-brand-dark font-heading font-bold text-[14px] tracking-wider uppercase py-3 hover:text-brand-accent transition-colors duration-200">
+                                    View All Services →
                                 </a>
-                                <div style="display:grid;grid-template-columns:1fr 1fr;column-gap:1.25rem;row-gap:0.75rem;font-size:0.875rem;font-weight:500;">
-                                    <a href="service%20pages/garden-design.html" class="hover:text-brand-dark transition-colors">Garden Design</a>
-                                    <a href="service%20pages/patios.html" class="hover:text-brand-dark transition-colors">Patios</a>
-                                    <a href="service%20pages/paving-driveways.html" class="hover:text-brand-dark transition-colors">Paving &amp; Driveways</a>
-                                    <a href="service%20pages/walling.html" class="hover:text-brand-dark transition-colors">Walling</a>
-                                    <a href="service%20pages/fencing.html" class="hover:text-brand-dark transition-colors">Fencing</a>
-                                    <a href="service%20pages/decking.html" class="hover:text-brand-dark transition-colors">Decking</a>
-                                    <a href="service%20pages/garden-rooms.html" class="hover:text-brand-dark transition-colors">Garden Rooms</a>
-                                    <a href="service%20pages/garden-sheds.html" class="hover:text-brand-dark transition-colors">Garden Sheds</a>
-                                    <a href="service%20pages/lawn-installation.html" class="hover:text-brand-dark transition-colors">Lawn Installation</a>
-                                    <a href="service%20pages/garden-maintenance.html" class="hover:text-brand-dark transition-colors">Garden Maintenance</a>
-                                    <a href="service%20pages/commercial-maintenance.html" class="hover:text-brand-dark transition-colors">Commercial Maintenance</a>
-                                    <a href="service%20pages/tree-work.html" class="hover:text-brand-dark transition-colors">Tree Work</a>
-                                    <a href="service%20pages/planting-plans.html" class="hover:text-brand-dark transition-colors">Planting Plans</a>
-                                </div>
+                                <a href="service%20pages/garden-design.html" class="block py-3 text-[15px] text-center text-brand-dark hover:text-brand-accent transition-colors duration-200">Garden Design</a>
+                                <a href="service%20pages/patios.html" class="block py-3 text-[15px] text-center text-brand-dark hover:text-brand-accent transition-colors duration-200">Patios</a>
+                                <a href="service%20pages/paving-driveways.html" class="block py-3 text-[15px] text-center text-brand-dark hover:text-brand-accent transition-colors duration-200">Paving &amp; Driveways</a>
+                                <a href="service%20pages/walling.html" class="block py-3 text-[15px] text-center text-brand-dark hover:text-brand-accent transition-colors duration-200">Walling</a>
+                                <a href="service%20pages/fencing.html" class="block py-3 text-[15px] text-center text-brand-dark hover:text-brand-accent transition-colors duration-200">Fencing</a>
+                                <a href="service%20pages/decking.html" class="block py-3 text-[15px] text-center text-brand-dark hover:text-brand-accent transition-colors duration-200">Decking</a>
+                                <a href="service%20pages/garden-rooms.html" class="block py-3 text-[15px] text-center text-brand-dark hover:text-brand-accent transition-colors duration-200">Garden Rooms</a>
+                                <a href="service%20pages/garden-sheds.html" class="block py-3 text-[15px] text-center text-brand-dark hover:text-brand-accent transition-colors duration-200">Garden Sheds</a>
+                                <a href="service%20pages/lawn-installation.html" class="block py-3 text-[15px] text-center text-brand-dark hover:text-brand-accent transition-colors duration-200">Lawn Installation</a>
+                                <a href="service%20pages/garden-maintenance.html" class="block py-3 text-[15px] text-center text-brand-dark hover:text-brand-accent transition-colors duration-200">Garden Maintenance</a>
+                                <a href="service%20pages/commercial-maintenance.html" class="block py-3 text-[15px] text-center text-brand-dark hover:text-brand-accent transition-colors duration-200">Commercial Maintenance</a>
+                                <a href="service%20pages/tree-work.html" class="block py-3 text-[15px] text-center text-brand-dark hover:text-brand-accent transition-colors duration-200">Tree Work</a>
+                                <a href="service%20pages/planting-plans.html" class="block py-3 text-[15px] text-center text-brand-dark hover:text-brand-accent transition-colors duration-200">Planting Plans</a>
                             </div>
                         </div>
                     </div>
-                    <a href="gallery.html"
-                        class="block py-2 text-lg font-medium hover:text-brand-accent transition-colors">Gallery</a>
-                    <a href="index.html#faq"
-                        class="block py-2 text-lg font-medium hover:text-brand-accent transition-colors">FAQs</a>
 
                     <!-- Where We Serve mobile expandable -->
                     <div class="w-full">
-                        <button onclick="var p=document.getElementById('mobileLocationsPanel');var open=!p.classList.contains('mob-loc-closed');p.style.maxHeight=open?'0':'600px';p.style.opacity=open?'0':'1';p.classList.toggle('mob-loc-closed');this.querySelector('svg').style.transform=open?'rotate(0deg)':'rotate(180deg)';"
-                            class="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-brand-dark/5 text-lg font-medium hover:text-brand-accent transition-colors">
-                            <span>Where We Serve</span>
-                            <svg style="transition:transform 0.3s ease;" class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <button onclick="var p=document.getElementById('mobileLocationsPanel');var open=!p.classList.contains('mob-loc-closed');p.style.maxHeight=open?'0':'1200px';p.style.opacity=open?'0':'1';p.classList.toggle('mob-loc-closed');this.querySelector('svg').style.transform=open?'rotate(0deg)':'rotate(180deg)';"
+                            class="w-full flex items-center py-4 px-6 text-lg font-semibold hover:text-brand-accent transition-colors duration-200">
+                            <span class="w-4 h-4 shrink-0"></span>
+                            <span class="flex-1 text-center">Where We Serve</span>
+                            <svg style="transition:transform 0.3s ease;" class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div id="mobileLocationsPanel" class="mob-loc-closed overflow-hidden" style="max-height:0;opacity:0;transition:max-height 0.4s ease,opacity 0.3s ease;">
-                            <div class="mt-3 rounded-2xl bg-brand-accent p-5 text-white">
-                                <a href="locations.html" class="flex items-center justify-center gap-2 text-white font-heading font-extrabold text-[11px] tracking-widest uppercase border-b border-white/15 pb-4 mb-4 hover:opacity-75 transition-opacity">
-                                    View All Locations
-                                    <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 12h14m-6-6l6 6-6 6"/></svg>
+                        <div id="mobileLocationsPanel" class="mob-loc-closed overflow-hidden" style="max-height:0;opacity:0;transition:max-height 0.5s ease,opacity 0.3s ease;">
+                            <div class="pb-2">
+                                <a href="locations.html" class="block text-center text-brand-dark font-heading font-bold text-[14px] tracking-wider uppercase py-3 hover:text-brand-accent transition-colors duration-200">
+                                    View All Locations →
                                 </a>
-                                <div style="display:grid;grid-template-columns:1fr 1fr;column-gap:1.25rem;row-gap:0.75rem;font-size:0.875rem;font-weight:500;">
-                                    <a href="location%20pages/maidstone.html" class="hover:text-brand-dark transition-colors">Maidstone</a>
-                                    <a href="location%20pages/canterbury.html" class="hover:text-brand-dark transition-colors">Canterbury</a>
-                                    <a href="location%20pages/royal-tunbridge-wells.html" class="hover:text-brand-dark transition-colors" style="font-size:0.75rem;">Royal Tunbridge Wells</a>
-                                    <a href="location%20pages/ashford.html" class="hover:text-brand-dark transition-colors">Ashford</a>
-                                    <a href="location%20pages/dartford.html" class="hover:text-brand-dark transition-colors">Dartford</a>
-                                    <a href="location%20pages/gravesend.html" class="hover:text-brand-dark transition-colors">Gravesend</a>
-                                    <a href="location%20pages/margate.html" class="hover:text-brand-dark transition-colors">Margate</a>
-                                    <a href="location%20pages/folkestone.html" class="hover:text-brand-dark transition-colors">Folkestone</a>
-                                    <a href="location%20pages/tonbridge.html" class="hover:text-brand-dark transition-colors">Tonbridge</a>
-                                    <a href="location%20pages/sevenoaks.html" class="hover:text-brand-dark transition-colors">Sevenoaks</a>
-                                    <a href="location%20pages/sittingbourne.html" class="hover:text-brand-dark transition-colors">Sittingbourne</a>
-                                    <a href="location%20pages/chatham.html" class="hover:text-brand-dark transition-colors">Chatham</a>
-                                    <a href="location%20pages/gillingham.html" class="hover:text-brand-dark transition-colors">Gillingham</a>
-                                    <a href="location%20pages/rochester.html" class="hover:text-brand-dark transition-colors">Rochester</a>
-                                    <a href="location%20pages/dover.html" class="hover:text-brand-dark transition-colors">Dover</a>
-                                    <a href="location%20pages/ramsgate.html" class="hover:text-brand-dark transition-colors">Ramsgate</a>
-                                    <a href="location%20pages/whitstable.html" class="hover:text-brand-dark transition-colors">Whitstable</a>
-                                    <a href="location%20pages/faversham.html" class="hover:text-brand-dark transition-colors">Faversham</a>
-                                    <a href="location%20pages/tenterden.html" class="hover:text-brand-dark transition-colors">Tenterden</a>
-                                    <a href="location%20pages/west-malling.html" class="hover:text-brand-dark transition-colors">West Malling</a>
-                                </div>
+                                <div class="flex justify-center"><div class="flex flex-col text-center">
+                                    <a href="location%20pages/maidstone.html" class="py-3 text-[15px] text-brand-dark hover:text-brand-accent transition-colors duration-200">Maidstone</a>
+                                    <a href="location%20pages/canterbury.html" class="py-3 text-[15px] text-brand-dark hover:text-brand-accent transition-colors duration-200">Canterbury</a>
+                                    <a href="location%20pages/royal-tunbridge-wells.html" class="py-3 text-[15px] text-brand-dark hover:text-brand-accent transition-colors duration-200">Royal Tunbridge Wells</a>
+                                    <a href="location%20pages/ashford.html" class="py-3 text-[15px] text-brand-dark hover:text-brand-accent transition-colors duration-200">Ashford</a>
+                                    <a href="location%20pages/dartford.html" class="py-3 text-[15px] text-brand-dark hover:text-brand-accent transition-colors duration-200">Dartford</a>
+                                    <a href="location%20pages/gravesend.html" class="py-3 text-[15px] text-brand-dark hover:text-brand-accent transition-colors duration-200">Gravesend</a>
+                                    <a href="location%20pages/margate.html" class="py-3 text-[15px] text-brand-dark hover:text-brand-accent transition-colors duration-200">Margate</a>
+                                    <a href="location%20pages/folkestone.html" class="py-3 text-[15px] text-brand-dark hover:text-brand-accent transition-colors duration-200">Folkestone</a>
+                                    <a href="location%20pages/tonbridge.html" class="py-3 text-[15px] text-brand-dark hover:text-brand-accent transition-colors duration-200">Tonbridge</a>
+                                    <a href="location%20pages/sevenoaks.html" class="py-3 text-[15px] text-brand-dark hover:text-brand-accent transition-colors duration-200">Sevenoaks</a>
+                                    <a href="location%20pages/sittingbourne.html" class="py-3 text-[15px] text-brand-dark hover:text-brand-accent transition-colors duration-200">Sittingbourne</a>
+                                    <a href="location%20pages/chatham.html" class="py-3 text-[15px] text-brand-dark hover:text-brand-accent transition-colors duration-200">Chatham</a>
+                                    <a href="location%20pages/gillingham.html" class="py-3 text-[15px] text-brand-dark hover:text-brand-accent transition-colors duration-200">Gillingham</a>
+                                    <a href="location%20pages/rochester.html" class="py-3 text-[15px] text-brand-dark hover:text-brand-accent transition-colors duration-200">Rochester</a>
+                                    <a href="location%20pages/dover.html" class="py-3 text-[15px] text-brand-dark hover:text-brand-accent transition-colors duration-200">Dover</a>
+                                    <a href="location%20pages/ramsgate.html" class="py-3 text-[15px] text-brand-dark hover:text-brand-accent transition-colors duration-200">Ramsgate</a>
+                                    <a href="location%20pages/whitstable.html" class="py-3 text-[15px] text-brand-dark hover:text-brand-accent transition-colors duration-200">Whitstable</a>
+                                    <a href="location%20pages/faversham.html" class="py-3 text-[15px] text-brand-dark hover:text-brand-accent transition-colors duration-200">Faversham</a>
+                                    <a href="location%20pages/tenterden.html" class="py-3 text-[15px] text-brand-dark hover:text-brand-accent transition-colors duration-200">Tenterden</a>
+                                    <a href="location%20pages/west-malling.html" class="py-3 text-[15px] text-brand-dark hover:text-brand-accent transition-colors duration-200">West Malling</a>
+                                </div></div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="pt-6 mt-2 border-t border-brand-dark/10">
+                    <a href="about.html" class="block py-4 text-lg font-semibold hover:text-brand-accent transition-colors duration-200">About Us</a>
+                    <a href="gallery.html" class="block py-4 text-lg font-semibold hover:text-brand-accent transition-colors duration-200">Gallery</a>
+                    <a href="index.html#faq" class="block py-4 text-lg font-semibold hover:text-brand-accent transition-colors duration-200">FAQs</a>
+
+                    <div class="px-6 pt-6 mt-2 border-t border-brand-dark/10">
                         <a href="contact.html"
                             class="inline-block w-full px-8 py-3.5 bg-brand-accent text-white font-bold rounded-xl hover:bg-brand-dark transition-colors shadow-[0_0_15px_rgba(231,64,64,0.3)]">
                             Contact Us

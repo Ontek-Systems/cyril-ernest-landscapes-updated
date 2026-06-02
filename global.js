@@ -81,24 +81,52 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     if (menuBtn && mobileNav) {
-        menuBtn.addEventListener('click', () => {
-            // Toggle the smooth animation classes instead of 'hidden'
-            mobileNav.classList.toggle('opacity-0');
-            mobileNav.classList.toggle('invisible');
-            mobileNav.classList.toggle('-translate-y-4');
-            mobileNav.classList.toggle('pointer-events-none');
-            
-            // Toggle the hamburger icon to an 'X' icon
-            const svg = menuBtn.querySelector('svg');
-            if (mobileNav.classList.contains('opacity-0')) {
-                // Hamburger icon (Menu Closed)
-                svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
-                menuBtn.setAttribute('aria-expanded', 'false');
-            } else {
-                // X icon (Menu Open)
-                svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
-                menuBtn.setAttribute('aria-expanded', 'true');
+        let menuOpen = false;
+
+        function closeMenu() {
+            if (!menuOpen) return;
+            menuOpen = false;
+            mobileNav.classList.add('opacity-0', '-translate-y-2', 'pointer-events-none');
+            document.body.style.overflow = '';
+            menuBtn.querySelector('svg').innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+            menuBtn.setAttribute('aria-expanded', 'false');
+
+            // Reset both accordions to closed
+            [['mobileServicesPanel', 'mob-svc-closed'], ['mobileLocationsPanel', 'mob-loc-closed']].forEach(([id, cls]) => {
+                const panel = document.getElementById(id);
+                if (!panel) return;
+                panel.style.maxHeight = '0';
+                panel.style.opacity = '0';
+                panel.classList.add(cls);
+                const btn = panel.previousElementSibling;
+                if (btn) btn.querySelector('svg').style.transform = 'rotate(0deg)';
+            });
+        }
+
+        function openMenu() {
+            if (menuOpen) return;
+            menuOpen = true;
+            mobileNav.classList.remove('opacity-0', '-translate-y-2', 'pointer-events-none');
+            document.body.style.overflow = 'hidden';
+            menuBtn.querySelector('svg').innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
+            menuBtn.setAttribute('aria-expanded', 'true');
+        }
+
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            menuOpen ? closeMenu() : openMenu();
+        });
+
+        // Click anywhere outside the drawer closes it
+        document.addEventListener('click', (e) => {
+            if (menuOpen && !mobileNav.contains(e.target) && !menuBtn.contains(e.target)) {
+                closeMenu();
             }
+        });
+
+        // Any link click inside the drawer closes it
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => closeMenu());
         });
     }
 

@@ -32,9 +32,6 @@ h1, h2, h3, h4, h5, h6 {
     transform: translate(0) scale(1);
 }
 
-img {
-    filter: saturate(1.5); /* 1.0 is normal, 1.5 is 50% more saturated */
-}
 
 /* ── Pill label: hover to darker red with black text ── */
 .pill-label {
@@ -155,44 +152,15 @@ img {
     display: none;
 }
 .hide-scrollbar {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-}img {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+img {
     filter: saturate(130%);
 }
 #header-logo, .qr-code, img[src*="logo"], img[src*="qrcode"] {
     filter: saturate(1);
-}
-
-/* ── Pill label ── */
-.pill-label {
-    display: inline-block;
-    padding: 0.375rem 1.25rem;
-    background-color: #df5164;
-    color: #ffffff;
-    border: 1px solid #df5164;
-    border-radius: 9999px;
-    font-size: 0.875rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 1.5rem;
-    font-weight: 400;
-    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
-    cursor: default;
-}
-.pill-label:hover {
-    background-color: #8b1c2a;
-    color: #000000;
-    border-color: #8b1c2a;
-}
-
-/* ── Animated section underline bar ── */
-.section-bar {
-    display: block;
-    height: 3px;
-    background-color: #df5164;
-    border-radius: 9999px;
-    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Masonry Grid Styles */
